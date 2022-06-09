@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { AvatarCounter } from './AvatarCounter';
+import { AvatarList } from './AvatarList';
+import { AvatarSearch } from './AvatarSearch';
+import { AvatarItem } from './AvatarItem';
+import { CreateAvatarButton } from './CreateAvatarButton';
+import avatars from './assets/img/avatar/avatars';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <AvatarCounter />
+      <AvatarSearch />
+      <AvatarList>
+        {avatars.map(avatar => (
+          <AvatarItem key={avatar.img} path={avatar.img}/>
+        ))}
+        
+      </AvatarList>
+    <CreateAvatarButton />
+    </React.Fragment>
   );
 }
 
