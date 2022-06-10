@@ -5,7 +5,7 @@ import Logo from './Logo.jpg';
 import Nina from './Nina.png';
 
 export default [
-    {img:Detective, selected: false},
+    {img:Detective, selected: true},
     {img:Detective2, selected: false},
     {img:Indi, selected: false},
     {img:Logo, selected: false},

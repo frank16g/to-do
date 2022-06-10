@@ -1,8 +1,8 @@
 import React from "react";
 
-function AvatarCounter() {
+function AvatarCounter({total, selected}) {
     return (
-        <h2>Ha completado 2 de 3 Avatars</h2>
+        <h2 className="AvatarCounter">Ha seleccionado {selected} de {total} Avatars</h2>
     );
 }
 

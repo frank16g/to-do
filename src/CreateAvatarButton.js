@@ -1,8 +1,16 @@
 import React from "react";
 
 function CreateAvatarButton() {
+    const onClickButton = ()=> {
+        alert('hi');
+    };
     return (
-        <button>+</button>
+        <button
+        className="CreateAvatarButton"
+        onClick={onClickButton}
+        >
+            +
+        </button>
     );
 }
 
